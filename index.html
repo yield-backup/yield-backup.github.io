@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/dataTables.responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css?ver=1.0" />
+        <link rel="icon" href="images/favicon.png" type="image/gif" sizes="10x16">
+        <title>Home - Yield Farming</title>
+    </head>
+    <body>
+        <style type="text/css">
+
+
+        </style>
+        <!-- https://www.figma.com/file/n0fQMzfHADJRZSvJzFHokd/Untitled?node-id=0%3A1 -->
+        <!--- modal--->
+        <div class="modal" id="Main_modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+             <!--  <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+
+              </div> -->
+            <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+              <!-- Modal body -->
+            <div class="modal-body">
+                <div class="modal_nav">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#approval">Approve</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#stake">Stake</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#claim">Claim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#withdrawal">Withdraw</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a href="./" target="_blank" class="nav-link btn-trade trade-uni">Trade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./" target="_blank"class="nav-link btn-buy buy-lp">Buy lp</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="approval" class="container tab-pane active">
+                       <h4 class="tab-heading">Approval status</h4>
+                       <div class="modal_ip_outer"><input disabled id="approvalAmount" type="text" class="form-control" placeholder="0.00"><span class="token"></span></div>
+                       <button type="button" class="btn modal-button">Approve</button>
+                    </div>
+                    <div id="stake" class="container tab-pane fade">
+                    	<h4 class="tab-heading">Send Amount</h4>
+                       <div class="modal_ip_outer"><input disabled id="stakeBalance" type="text" class="form-control" placeholder="0.000"><span class="token"></span></div>
+                       <div class="modal_ip_outer"><input id="stakeInput" type="text" class="form-control" placeholder=""><span class="token"></span></div>
+                       <button type="button" class="btn modal-button">STAKE</button>
+                    </div>
+                    <div id="claim" class="container tab-pane fade">
+                        <h4 class="tab-heading">Claim Amount</h4>
+                       <div class="modal_ip_outer"><input disabled id="claimBalance" type="text" class="form-control" placeholder="0.000"><span>YIELDX</span></div>
+                       <button type="button" class="btn modal-button">CLAIM</button>
+                    </div>
+                    <div id="withdrawal" class="container tab-pane fade">
+                    	<h4 class="tab-heading">Withdrawal Amount</h4>
+                      <div class="modal_ip_outer"><input disabled id="withdrawalAmount" type="text" class="form-control" placeholder="0.000"><span class="token"></span></div>
+                      <div class="modal_ip_outer"><input id="withdrawalInput" type="text" class="form-control" placeholder=""><span class="token"></span></div>
+                       <button type="button" class="btn modal-button">WITHDRAW</button>
+                    </div>
+                </div>
+
+              </div>
+
+              <!-- Modal footer -->
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+        <!---end-->
+
+        <!-- Header -->
+        <header class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.20s">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-logo">
+                        <a href="#" class="logo">
+                            <img src="images/logo.png" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="header-choice">
+                        <h5>Select a pair from below</h5>
+                        <a href="#" class="choose-btn">
+                            <img src="images/icons/ch-btn.png" alt="icons"/>
+                        </a>
+                    </div>
+                    <div><a style="cursor:pointer;" class="btn-approve metamask"><span>Connect Metamask</span> <img src="images/fox.png"></a></div>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Pair list -->
+        <section class="pair-list wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.40s">
+            <div class="container">
+                <div class="pair-wrapper">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="pair-list-blk">
+                                <p>listed pairs</p>
+                                <h4>7</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pair-list-blk">
+                                <p>Market Cap:</p>
+                                <h4><span class="marketcap"></span> USD</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pair-list-blk">
+                                <p>total locked</p>
+                                <h4><span class="totalValueLocked"></span> USD</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pair-list-blk">
+                                <p class="txt-green">buyback balance</p>
+                                <h4><span id="buyBack"></span> USD</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pair list End -->
+
+        <!-- About Us -->
+        <section class="about-us wow fadeInDown" data-wow-duration="2s" data-wow-delay="0.60s">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="about-block">
+                                <p>To farm the original YIELD go to <a href="https://legacyfarming.io" target="_blank">legacyfarming.io</a>, on the main site you are now farming <strong>YIELDX</strong>. A farming token with more <strong>sophisticated</strong> tokenomics.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="about-block">
+                                <p>All non YIELDX pairs have a <strong>small</strong> deposit fee, of which <strong>100%</strong> goes towards buyback/burn/promotion. <strong>YIELDX burns 2.5% on transfers.</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="about-block">
+                              <p>This contract has been <strong>AUDITED</strong> and is safe to use. Click <strong><a href="./Yield_Farming_audit-2.pdf" target="_blank">HERE</a></strong> to read the audit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Us -->
+
+        <!-- Yeild Table  -->
+        <section class="yeild-table wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="container">
+                <div class="yeild-wrapper">
+                    <div class="yeild-list">
+                      <div params='{"token":"0x51FB69E687d63c242c03E94F5D770142cB304C8A", "name":"YIELDX-ETH", "id":"0", "uni-link":"inputCurrency=0xE52d53c8C9aa7255F8c2FA9f7093FEa7192D2933&outputCurrency=ETH"}'>
+                        <ul>
+                            <li class="yeild-icon">
+                                <span><img src="./images/icons/YIELD-ETH.png" height="40px" alt="icons"></span>
+                            </li>
+                            <li class="yeild-eth">
+                                <h4>YIELDX-ETH</h4>
+                                <p>MULTIPLE: 25x</p>
+                            </li>
+                            <li class="yeild-pr">
+                                <span>apy</span>
+                                <h4 id="apy"></h4>
+                            </li>
+                            <li class="yeild-pr">
+                                <span>locked value</span>
+                              <h4 id="lockedValue"></h4>
+                            </li>
+                        </ul>
+                      </div>
+                      <div params='{"token":"0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852", "name":"USDT-ETH", "id":"3", "uni-link":"inputCurrency=ETH&outputCurrency=0xdac17f958d2ee523a2206206994597c13d831ec7"}'>
+                        <ul>
+                          <li class="yeild-icon">
+                              <span><img src="./images/icons/USDT-ETH.png" height="40px" alt="icons"></span>
+                          </li>
+                          <li class="yeild-eth">
+                              <h4>USDT-ETH</h4>
+                              <p>MULTIPLE: 1.5x</p>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>apy</span>
+                                <h4 id="apy"></h4>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>locked value</span>
+                              <h4 id="lockedValue"></h4>
+                          </li>
+                        </ul>
+                      </div>
+                      <div params='{"token":"0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc", "name":"USDC-ETH", "id":"2", "uni-link":"inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=ETH"}'>
+                        <ul>
+                          <li class="yeild-icon">
+                              <span><img src="./images/icons/USDC-ETH.png" height="40px" alt="icons"></span>
+                          </li>
+                          <li class="yeild-eth">
+                              <h4>USDC-ETH</h4>
+                              <p>MULTIPLE: 1.5x</p>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>apy</span>
+                                <h4 id="apy"></h4>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>locked value</span>
+                              <h4 id="lockedValue"></h4>
+                          </li>
+                        </ul>
+                      </div>
+                    <div params='{"token":"0xd8C9b8a84946d3C96a322A02De96E04EE4354b4B", "name":"OPT-ETH", "id":"8", "uni-link":"inputCurrency=ETH&outputCurrency=0x7D25d9f10Cd224EcCe0Bc824A2eC800Db81C01d7"}'>
+                        <ul>
+                          <li class="yeild-icon">
+                              <span><img src="./images/icons/OPT-ETH.png" height="40px" alt="icons"></span>
+                          </li>
+                          <li class="yeild-eth">
+                              <h4>OPT-ETH</h4>
+                              <p>MULTIPLE: 4x</p>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>apy</span>
+                                <h4 id="apy"></h4>
+                          </li>
+                          <li class="yeild-pr">
+                              <span>locked value</span>
+                              <h4 id="lockedValue"></h4>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Yeild Table  -->
+
+        <!-- Yeild Gauid -->
+        <section class="yeild-guide wow fadeInDown" data-wow-duration="2s" data-wow-delay="0.40s">
+            <div class="container">
+                <div class="yeild-guide-wrapper">
+                    <ul class="guide-icon">
+						<li>
+							<a href="https://twitter.com/yieldfarmingio" class="link dim gray dib h2 w2 br-100 mr3 " target="_blank" title="Twitter">
+								<svg width="32" height="27" xmlns="http://www.w3.org/2000/svg"><path d="M2 1c4 4 8 8 13 7a6 6 0 017-7 6 6 0 014 2 8 8 0 005-2 8 8 0 01-3 4 8 8 0 004-1 8 8 0 01-4 4 18 18 0 01-18 19 18 18 0 01-10-3 12 12 0 008-3 8 8 0 01-5-4 8 8 0 003-.5A8 8 0 010 9a8 8 0 003 1 8 8 0 01-1-9" fill="#5B6987" fill-rule="nonzero"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://discord.com/invite/9RhP7u6" class="link dim gray dib h2 w2 br-100 mr3 " target="_blank" title="Discord">
+								<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M11.93 4.758l.267.32C7.409 6.46 5.2 8.56 5.2 8.56s.586-.319 1.57-.77c6.128-2.693 13.55-2.692 19.868.77 0 0-2.101-1.994-6.623-3.377l.373-.426h.12c.657.016 3.93.226 7.353 2.793 0 0 .06.108.165.315l.087.173c.852 1.72 3.578 7.792 3.578 15.018 0 0-2.26 3.857-8.138 4.043 0 0-.958-1.144-1.756-2.155 3.484-.984 4.814-3.165 4.814-3.165a15.22 15.22 0 01-3.058 1.57c-5.73 2.406-12.108 1.583-16.597-.931-.054-.036-.7-.391-1.09-.665 0 0 0 .002.003.005l.025.04c.206.311 1.538 2.17 4.626 3.093A169.885 169.885 0 018.739 27.1C2.86 26.914.627 23.057.627 23.057c0-7.226 2.726-13.297 3.578-15.018l.087-.173c.105-.207.165-.315.165-.315 3.422-2.567 6.696-2.777 7.354-2.792l.12-.001zm8.964 9.92c-1.516 0-2.713 1.33-2.713 2.953 0 1.623 1.223 2.952 2.713 2.952 1.516 0 2.713-1.33 2.713-2.952 0-1.622-1.197-2.952-2.713-2.952zm-9.708 0c-1.516 0-2.713 1.33-2.713 2.953 0 1.623 1.223 2.952 2.713 2.952 1.516 0 2.713-1.33 2.713-2.952.026-1.622-1.197-2.952-2.713-2.952z" fill="#5B6987" fill-rule="nonzero"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://t.me/yieldfarmingio" class="link dim gray dib br-100 h2 w2 mr3 " target="_blank" title="Telegram">
+								<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M31.748 5.487L27.08 27.485c-.345 1.56-1.274 1.939-2.57 1.205l-7.11-5.242-3.43 3.303c-.379.379-.7.7-1.434.7l.505-7.237L26.219 8.308c.574-.504-.126-.791-.883-.286L9.05 18.275l-7.019-2.19c-1.525-.482-1.56-1.526.321-2.26L29.775 3.25c1.273-.459 2.386.31 1.973 2.237z" fill="#5B6987" fill-rule="nonzero"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://coinmarketcap.com/currencies/yieldx/" class="link dim gray dib br-100 h2 w2 mr3 " target="_blank" title="Coin Market Cap">
+								<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M27.414 19.122c-.558.353-1.215.396-1.715.115-.634-.359-.983-1.198-.983-2.364V13.38c0-1.685-.667-2.885-1.781-3.209-1.89-.55-3.31 1.76-3.843 2.629l-3.332 5.4v-6.6c-.037-1.52-.53-2.428-1.467-2.702-.62-.181-1.547-.108-2.448 1.27L4.382 22.153c-.999-1.897-1.52-4.01-1.517-6.153 0-7.219 5.785-13.091 12.895-13.091 7.11 0 12.895 5.872 12.895 13.091 0 .012.003.023.004.035 0 .013-.003.024-.002.036.067 1.398-.385 2.51-1.243 3.052v-.001zm4.106-3.121v-.073C31.48 7.137 24.425 0 15.76 0 7.07 0 0 7.177 0 16c0 8.822 7.07 16 15.76 16a15.58 15.58 0 0010.715-4.267c.58-.546.615-1.466.076-2.055a1.418 1.418 0 00-2.024-.078 12.746 12.746 0 01-8.767 3.491c-3.807 0-7.232-1.685-9.595-4.357l6.73-10.807v4.982c0 2.393.928 3.166 1.706 3.393.78.226 1.97.071 3.22-1.958l3.701-6.001c.119-.194.228-.36.328-.505v3.035c0 2.236.896 4.025 2.458 4.907 1.408.794 3.178.722 4.62-.188 1.748-1.104 2.69-3.139 2.592-5.591z" fill="#5B6987" fill-rule="evenodd"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.coingecko.com/en/coins/yieldx" class="link dim gray dib br-100 h2 w2 mr3 " target="_blank" title="Coin Gecko">
+								<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#fff" stroke-width="2.016" cx="14.933" cy="14.933" r="14.933"></circle><path d="M16.37 7.317c1.31 0 2.371.702 2.371 1.568l-.001-.036c.384.168.756.33.895.383.264.102.761.282 1.49.539 3.125.767 4.722 1.945 4.79 3.534 0 .39-.017.875-.203 1.317-.324.768-1.467 2.076-3.43 3.923-1.348 1.428-2.262 2.473-2.743 3.134-.702.966-1.204 2.042-1.557 2.761-.714 1.458-.92 2.842-.62 4.15l-.94.645h-1.914l-2.81-.348-2.556-.907-2.392-1.35-1.338-1.347L3.51 23.56v-.707c.568-1.466.946-2.66 1.134-3.579.188-.92.357-2.398.505-4.435.075-2.546.809-4.36 2.2-5.44a10.381 10.381 0 014.235-1.979c.56-.117.855-.105 1.777-.055.822.045 1.229.126 1.667.228a3.24 3.24 0 011.343-.277zm8.88 8.06s-1.96 1.762-6.071 2.308c-.495.065-1.69.212-2.923-.118-.248-.066-.631-.227-1.15-.482.566.798 1.7 1.175 3.404 1.13 4.152-.448 6.492-2.6 6.72-2.82l.02-.018zm-2.757-1.75a.579.579 0 100 1.157.579.579 0 000-1.157zM12.9 9.669a1.904 1.904 0 100 3.808 1.904 1.904 0 000-3.808z" fill="#5B6987"></path></g></svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://etherscan.io/token/0xE52d53c8C9aa7255F8c2FA9f7093FEa7192D2933" class="link dim gray dib br-100 h2 w2 mr3 " target="_blank" title="Etherscan">
+								<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g fill="#5B6987" fill-rule="nonzero"><path d="M6.645 15.218a1.355 1.355 0 011.362-1.355l2.257.007c.75 0 1.357.608 1.357 1.357v8.535c.254-.075.58-.155.937-.24.511-.12.872-.575.872-1.1V11.836c0-.75.608-1.358 1.357-1.358h2.262c.75 0 1.357.608 1.357 1.358v9.825s.566-.229 1.117-.462c.42-.177.692-.587.692-1.042V8.443a1.357 1.357 0 011.357-1.357h2.261c.75 0 1.357.607 1.357 1.357v9.646c1.961-1.421 3.948-3.13 5.525-5.185a2.278 2.278 0 00.347-2.127A15.956 15.956 0 0016.189.001C7.325-.119 0 7.118 0 15.983a15.932 15.932 0 002.123 7.994 2.02 2.02 0 001.927.999c.428-.038.96-.091 1.594-.165a1.13 1.13 0 001.002-1.122v-8.47M6.596 28.906a15.98 15.98 0 0025.38-12.924 16.1 16.1 0 00-.042-1.094c-5.839 8.708-16.62 12.779-25.338 14.019"></path></g></svg>
+							</a>
+						</li>
+					</ul>
+
+
+                    <ul class="guide-react">
+                        <li><a href="https://yieldfarming-io.medium.com/yield-farming-io-farmers-guide-6c93d89382f8" target="_blank">Guide</a></li>
+                        <li><a href="#">Send Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Yeild Gauid -->
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="js/dataTables.responsive.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script src="https://cdn.rawgit.com/MikeMcl/bignumber.js/7269d028/bignumber.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+        <script type="text/javascript" src="js/script.min.js"></script>
+        <script type="text/javascript">
+            //wow animation js
+            new WOW().init();
+
+            //data table js
+            $('.table').DataTable();
+        </script>
+       <script type="text/javascript">
+        $(".yeild-list ul").click(function(){
+		   $('#Main_modal').modal('show').fadeIn('slow');;
+		});
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    $('.yeild-list > div').on('click', function(e) {
+      console.log("here");
+    	let params = $(e.currentTarget).attr('params');
+    	localStorage.setItem("params", params);
+      let paramsJSON = JSON.parse(params);
+      if(paramsJSON['token'].slice(0,2) === "0x" && !isNaN(paramsJSON['id'])) {
+        let tradeLink = "https://app.uniswap.org/#/swap/?" + paramsJSON['uni-link'];
+        let input = getParameterByName('inputCurrency', tradeLink);
+        let output = getParameterByName('outputCurrency', tradeLink);
+        let addLiqLink = "https://app.uniswap.org/#/add/" + input + "/" + output;
+        $('.trade-uni').attr("href", tradeLink);
+        $('.buy-lp').attr("href", addLiqLink);
+        $('.token').text(paramsJSON['name']);
+      }
+    });
+    </script>
+    </body>
+</html>

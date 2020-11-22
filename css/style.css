@@ -1,0 +1,768 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+         url("../fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-LightItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Light.woff2") format("woff2"),
+         url("../fonts/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+         url("../fonts/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-MediumItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+         url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Thin.woff2") format("woff2"),
+         url("../fonts/Montserrat-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-BlackItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Italic.woff2") format("woff2"),
+         url("../fonts/Montserrat-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"),
+         url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
+         url("../fonts/Montserrat-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+         url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+         url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"),
+         url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Comman Css*/
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+}
+body {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Montserrat";
+    color: #000;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(180deg, #0A142D 0%, #072744 100%);
+}
+body:after{
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 81%;
+  left: 50%;
+  top: -180px;
+  z-index: -1;
+  transform: translate(-50%, 0);
+  opacity: 0.1;
+  background: radial-gradient(50% 50% at 50% 50%, #02D6F4 0%, rgba(0, 74, 84, 0) 100%);
+}
+
+/* Navigation*/ 
+header{
+  width: 100%;
+  display: block;
+  padding: 0px;
+  height: 100px;
+  position: relative;
+  background-color: rgba(0,0,0,0.2);
+}
+header:after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  opacity: 1;
+  bottom: -15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(0,0,0,0.2);
+}
+.header-wrapper{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.header-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-logo{
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 1;
+}
+.header-choice{
+  display: table;
+  margin: 0 auto;
+}
+.header-choice h5{
+  color: #44B5C5;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+.header-choice .choose-btn{
+  display: table;
+  margin: 10px auto 0;
+}
+/*End Navigation*/
+
+/*Index*/
+/*Pair List*/
+.pair-list{
+  width: 100%;
+  display: block;
+  padding: 50px 0;
+}
+.pair-wrapper{
+  width: 100%;
+  display: block;
+}
+.pair-list-blk{
+  width: 100%;
+  display: block;
+}
+.pair-list-blk h4 span,
+.pair-list-blk p{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  color: #44B5C5;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.pair-list-blk h4{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #fff;
+  margin: 0;
+}
+.pair-list-blk .txt-green{
+  color: #44C549;
+}
+.pair-list-blk h4 span{
+  color: #44C549;
+  opacity: 0.2;
+}
+/*Pair List end*/
+/*About*/
+.about-us{
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+.about-wrapper{
+  width: 100%;
+  display: block;
+}
+.about-block{
+  width: 100%;
+  display: block;
+  min-height: 155px;
+  padding: 15px;
+  position: relative;
+}
+.about-block:before{
+  content: '';
+  position: absolute;
+  opacity: 0.05;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 4px 4px #000000;
+  background: rgb(0, 107, 122);
+  border-radius: 5px;
+}
+.about-block p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 201.9%;
+  letter-spacing: 0.1em;
+  color: #275F71;
+  margin-bottom: 0;
+}
+.about-block p a,
+.about-block p strong{
+  color: #44B5C5;
+}
+/*About end*/
+/*Yeild Table*/
+.yeild-table{
+  width: 100%;
+  display: block;
+  padding: 25px 0;
+}
+.yeild-list,
+.yeild-wrapper{
+  width: 100%;
+  display: block;
+}
+.yeild-list{
+  padding-left: 15px;
+}
+.yeild-list ul{
+  position: relative;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 89px;
+  background: rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+  cursor: pointer;
+   transition: all 0.6s ease;
+}
+.yeild-list ul:hover{
+  transform: scale(1.01);
+}
+.yeild-list ul:before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: -14px;
+  top: 0;
+  background-color: #44b5c5;
+}
+.yeild-list ul li{
+  margin-right: 20px;
+  list-style: none;
+  align-items: center;
+}
+.yeild-list ul li:last-child{
+  margin-right: 0;
+}
+.yeild-list ul li h4{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 0;
+}
+.yeild-list ul li p{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #44B5C5;
+  margin-bottom: 0;
+}
+.yeild-list ul li>span{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #44B5C5;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.yeild-list ul li>img{
+  max-width: 100%;
+}
+.yeild-list ul li h4 span{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #44B5C5;
+  margin-bottom: 0;
+  opacity: 0.2;
+  text-transform: uppercase;
+}
+.yeild-list ul li.yeild-icon{
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yeild-list ul li.yeild-eth{
+  width: 55%;
+}
+.yeild-list ul li.yeild-pr{
+  width: 15%;
+}
+/*Yeild Table end*/
+/*Yeild Guide*/
+.yeild-guide{
+  width: 100%;
+  display: block;
+  padding: 0px 0 40px;
+}
+.yeild-guide-wrapper{
+  width: 100%;
+  display: block;
+}
+.guide-icon{
+  display: table;
+  margin: 0 auto 20px;
+}
+.guide-icon li{
+  float: left;
+  list-style-type: none;
+  margin-right: 20px;
+}
+.guide-icon li:last-child{
+  margin-right: 0;
+}
+.guide-icon  li a{
+  display: block;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #0B4254;
+}
+
+.guide-react{
+  display: table;
+  margin: 0 auto;
+}
+.guide-react li{
+  float: left;
+  list-style-type: none;
+  margin-right: 20px;
+}
+.guide-react li:last-child{
+  margin-right: 0;
+}
+.guide-react li a{
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #44B5C5;
+  text-transform: uppercase;
+}
+/*Yeild Guide end*/
+/*Index end*/
+
+
+
+#Main_modal{
+/*  transition: all 1s ease*/
+}
+.modal_nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Main_modal .modal-dialog{
+  max-width: 700px !important;
+}
+#Main_modal .modal-content{
+  background: linear-gradient(180deg, #0A142D 0%, #072744 100%), linear-gradient(180deg, #0A142D 0%, #072744 100%);
+  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.modal_nav .nav-tabs .nav-link{
+  color: #44B5C5;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+}
+.modal_nav .nav-tabs .nav-item{
+  padding: 1em 0;
+  position: relative;
+}
+.modal_nav .nav-tabs .nav-link{
+  padding: 10px !important;
+  margin: 10px !important;
+  margin-bottom: 0 !important
+}
+.modal_nav .nav-tabs .nav-link:hover{
+  border-color: transparent;
+  bottom: 0;
+   margin-bottom: 0 !important
+}
+.modal_nav .nav-tabs .nav-link.active::after{
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/icons/ch-btn.png');
+  background-size: cover;
+  background-color: #091933;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,8px);
+  border-left: 6px solid #091933;
+  border-right: 6px solid #091933;
+  box-sizing: content-box;
+}
+.modal_nav .nav-tabs{
+  border-bottom: 0
+}
+.modal_nav .nav-tabs .nav-link.active{
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+#Main_modal .tab-content{
+  margin:  36px 0 50px 0;
+}
+#Main_modal .modal-body{
+  padding: 0;
+}
+.modal_nav{
+  border-bottom: 1px solid rgba(56, 151, 169, 0.1);
+  padding: 0 1em
+}
+.modal_nav .btn-trade{
+  background-color: rgba(0, 107, 122, 0.1) !important;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #44B5C5 !important;
+  margin-right: 10px;
+  padding: 12px 20px !important;
+}
+.modal_nav .btn-buy{
+  background-color: rgba(19, 180, 44, 0.1) !important;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #44C560 !important;;
+  padding: 12px 20px !important
+}
+.modal-button{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,50%); 
+  bottom: 0;     
+  background: linear-gradient(270deg, #44B5C5 0%, #0E7AA9 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.13);
+  border-radius: 3px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 0px rgba(7, 38, 67, 0.38);
+  padding: 10px 24px; 
+  position: absolute;
+}
+.modal-button:hover{
+  transform: translate(-50%,50%); 
+  color: #fff
+}
+#Main_modal .close{
+  color: #fff;
+  position: absolute;
+  right: -12px;
+  top: -12px;
+ background: linear-gradient(270deg, #44B5C5 0%, #0E7AA9 100%);
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Main_modal .close i{
+   font-size: 14px;
+   position: absolute;
+  }
+#Main_modal .tab-heading{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px
+}
+.modal_ip_outer{
+  position: relative;
+  margin-bottom: 10px
+}
+.modal_ip_outer input{
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 0;
+  padding-right: 50px;
+ height: 50px !important;
+ color: #fff !important;
+ font-size: 16px
+}
+.modal_ip_outer input:focus{
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 0;
+  padding-right: 50px;
+ height: 50px !important;
+ box-shadow: none;
+}
+.modal_ip_outer input::placeholder{
+   color: #fff !important;
+
+}
+.modal_ip_outer span{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #44B5C5;
+}
+
+.choose-btn img {
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform:  translate(0px, 20px);
+    opacity: 0;
+  }
+}
+.btn-approve{
+   background-color: rgba(0, 107, 122, 0.1) !important;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #44B5C5 !important;
+  margin-right: 10px;
+  padding: 12px 20px !important;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+.btn-approve:hover{
+  box-shadow: 0px 0px 10px 1px rgba(68, 181, 197, 0.6);
+}
+.btn-approve img{
+  display: inline;
+}
+.guide-icon svg{
+    transform: scale(0.6);
+    position: relative;
+    top: -3px;
+    left: 2px;
+    transform-origin: center center;
+}
+.guide-icon path{
+  fill: white
+}

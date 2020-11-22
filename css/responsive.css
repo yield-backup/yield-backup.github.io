@@ -1,0 +1,301 @@
+@media(min-width:1025px) and (max-width:1350px){
+	/*index*/
+	.pair-list{
+		padding: 40px 0 25px;
+	}
+	.yeild-list ul li.yeild-eth{
+		width: 43%;
+	}
+	.yeild-list ul li.yeild-pr{
+		width: 20%;
+	}
+	/*index end*/
+}
+@media(min-width:992px) and (max-width:1024px){
+	/*index*/
+	.pair-list{
+		padding: 40px 0 25px;
+	}
+	.yeild-list ul li.yeild-eth{
+		width: 43%;
+	}
+	.yeild-list ul li.yeild-pr{
+		width: 20%;
+	}
+	/*index end*/
+}
+@media(min-width:768px) and (max-width:991px){
+	/*index*/
+	.pair-list{
+		padding: 40px 0 25px;
+	}
+	.yeild-list ul li.yeild-eth{
+		width: 43%;
+	}
+	.yeild-list ul li.yeild-pr{
+		width: 20%;
+	}
+
+	.pair-list-blk h4{
+	    font-size: 18px;
+	}
+
+	.about-block p{
+		font-size: 10px;
+	}
+
+	.yeild-list ul li h4{
+	    font-size: 16px;
+	}
+	.yeild-list ul li p{
+		font-size: 11px;
+	}
+
+	.guide-react li a{
+		font-size: 10px;
+	}
+	/*index end*/
+}
+@media(min-width:448px) and (max-width:767px){
+	.modal-dialog{
+		margin: 20px !important
+	}
+	.btn-approve{
+		font-size: 9px;
+		position: relative;
+	    margin: auto;
+    	display: table;
+    	    margin-top: 20px;
+	}
+	.header-wrapper{
+		display: flex;
+		flex-direction: column;
+	}
+	.header-choice{
+		order: 1
+	}
+	.header-logo{
+		order: 0
+	}
+	.btn-approve img{
+		width: 12px;
+	}
+	.modal_nav{
+		    flex-direction: column-reverse;
+	}
+	.modal_nav .nav-tabs .nav-link{
+		margin-top: 0 !important
+	}
+	.modal_nav{
+		margin-top: 30px
+	}
+	/*header*/
+	header{
+		height: auto;
+	}
+	.header-logo{
+		padding-top: 10px;
+		position: static;
+		display: block;
+	}
+	.header-logo img{
+		margin: 0 auto 15px;
+	}
+	.header-choice h5{
+	    margin-top: 0;
+    	margin-bottom: 0;
+	}
+	.header-choice .choose-btn{
+		margin-top: 0;
+	}
+	/*header end*/
+	/*index*/
+	.pair-list-blk{
+		margin-bottom: 20px;
+	}
+	.pair-list-blk h4{
+		text-align: center;
+	}
+	.pair-list-blk h4 span, .pair-list-blk p{
+		text-align: center;
+	}
+	.pair-list{
+		padding: 40px 0 25px;
+	}
+	.yeild-list ul{
+		display: table;
+		padding: 20px;
+		padding-bottom: 0;
+	}
+	.yeild-list ul li{
+		margin-bottom: 20px;
+	}
+	.yeild-list ul li.yeild-icon,
+	.yeild-list ul li.yeild-eth,
+	.yeild-list ul li.yeild-pr{
+		width: 100%;
+	}
+	.yeild-list ul li h4{
+		text-align: center;
+	    font-size: 16px;
+	}
+	.yeild-list ul li p{
+		text-align: center;
+		font-size: 11px;
+	}
+	.yeild-list ul li span{
+		text-align: center;
+	}
+
+	.yeild-list ul li.yeild-pr>span{
+		margin-bottom: 5px;
+	}
+
+	.pair-list-blk h4{
+	    font-size: 18px;
+	}
+
+	.about-block{
+		padding: 40px;
+		min-height: auto;
+		margin-bottom: 40px;
+	}
+	.about-block p{
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.guide-react li a{
+		font-size: 10px;
+	}
+	/*index end*/
+}
+@media(max-width:447px){
+	.modal_nav .nav-tabs .nav-link.active::after{
+		background-color: #081C37;
+		border-left: 6px solid #081C37;
+		border-right: 6px solid #081C37;
+	}
+	.modal_nav .nav-tabs .nav-link{
+		    padding: 10px 0px !important;
+
+    margin: 10px 5px !important;
+    font-size: 12px
+	}
+	#Main_modal .tab-heading{
+		font-size: 15px;
+		font-weight: 600
+	}
+	.modal-dialog{
+		margin: 20px !important
+	}
+	.btn-approve{
+		font-size: 9px;
+		position: relative;
+	    margin: auto;
+    	display: table;
+    	    margin-top: 20px;
+	}
+	.header-wrapper{
+		display: flex;
+		flex-direction: column;
+	}
+	.header-choice{
+		order: 1
+	}
+	.header-logo{
+		order: 0
+	}
+	.btn-approve img{
+		width: 12px;
+	}
+	.modal_nav{
+		    flex-direction: column-reverse;
+	}
+	.modal_nav .nav-tabs .nav-link{
+		margin-top: 0 !important
+	}
+	.modal_nav{
+		margin-top: 30px
+	}
+	/*header*/
+	header{
+		height: auto;
+	}
+	.header-logo{
+		padding-top: 10px;
+		position: static;
+		display: block;
+	}
+	.header-logo img{
+		margin: 0 auto 15px;
+	}
+	.header-choice h5{
+	    margin-top: 0;
+    	margin-bottom: 0;
+	}
+	.header-choice .choose-btn{
+		margin-top: 0;
+	}
+	/*header end*/
+	/*index*/
+	.pair-list-blk{
+		margin-bottom: 20px;
+	}
+	.pair-list-blk h4{
+		text-align: center;
+	}
+	.pair-list-blk h4 span, .pair-list-blk p{
+		text-align: center;
+	}
+	.pair-list{
+		padding: 40px 0 25px;
+	}
+	.yeild-list ul{
+		display: table;
+		padding: 20px;
+		padding-bottom: 0;
+	}
+	.yeild-list ul li{
+		margin-bottom: 20px;
+	}
+	.yeild-list ul li.yeild-icon,
+	.yeild-list ul li.yeild-eth,
+	.yeild-list ul li.yeild-pr{
+		width: 100%;
+	}
+	.yeild-list ul li h4{
+		text-align: center;
+	    font-size: 16px;
+	}
+	.yeild-list ul li p{
+		text-align: center;
+		font-size: 11px;
+	}
+	.yeild-list ul li span{
+		text-align: center;
+	}
+
+	.yeild-list ul li.yeild-pr>span{
+		margin-bottom: 5px;
+	}
+
+	.pair-list-blk h4{
+	    font-size: 18px;
+	}
+
+	.about-block{
+		padding: 40px;
+		min-height: auto;
+		margin-bottom: 40px;
+	}
+	.about-block p{
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.guide-react li a{
+		font-size: 10px;
+	}
+	/*index end*/
+}
